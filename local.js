@@ -1,5 +1,5 @@
 function loadUsers() {
-	$.get('http://dummy.restapiexample.com/api/v1/employees', createUsersIndex);
+	$.get('https://cors-anywhere.herokuapp.com/http://dummy.restapiexample.com/api/v1/employees', createUsersIndex);
 }
 
 function createUsersIndex(data) {
@@ -58,7 +58,7 @@ function uploadNewUserData() {
 
 		}
 	}
-	requester.open("POST", "http://dummy.restapiexample.com/api/v1/create", true);
+	requester.open("POST", "https://cors-anywhere.herokuapp.com/http://dummy.restapiexample.com/api/v1/create", true);
 	requester.setRequestHeader('Content-Type', 'application/json');
 	requester.send(JSON.stringify({
 		"name": `${newUserName}`,
@@ -110,7 +110,7 @@ function callUserData() {
 	// Llama a la API para obtener el usuario elegido con el ID
 	const userId = $('#calluser-id').val();
 	console.log(userId);
-	$.get('http://dummy.restapiexample.com/api/v1/employee/'+userId, function(evento) {
+	$.get('https://cors-anywhere.herokuapp.com/http://dummy.restapiexample.com/api/v1/employee/'+userId, function(evento) {
 		createCardUser;
 		//document.querySelector('#calluser-id').value = '';
 	});
@@ -175,7 +175,7 @@ function updateUserData(userId) {
 			updateUserCard(newUserName, newUserSalary, newUserAge, userId);
 		}
 	}
-	requester.open("PUT", "http://dummy.restapiexample.com/api/v1/update/" + userId, true);
+	requester.open("PUT", "https://cors-anywhere.herokuapp.com/http://dummy.restapiexample.com/api/v1/update/" + userId, true);
 	requester.setRequestHeader('Content-Type', 'application/json');
 	requester.send(JSON.stringify({
 		"name": `${newUserName}`,
@@ -250,7 +250,7 @@ function deleteUserData(userId) {
 			}, 3000);
 		}
 	}
-	requester.open("DELETE", "http://dummy.restapiexample.com/api/v1/delete/" + userId, true);
+	requester.open("DELETE", "https://cors-anywhere.herokuapp.com/http://dummy.restapiexample.com/api/v1/delete/" + userId, true);
 	requester.send();
 }
 
