@@ -12,7 +12,7 @@ Las tecnologías utilizadas son:
 <ul>
 <li> html 5</li>
 <li> CSS 3</li>
-<li> JAvaScript</li>
+<li> JavaScript</li>
 <li> JQuery</li>
 <li> Bootstrap</li>
 </ul>
